@@ -2,8 +2,9 @@
 Getting and Cleaning Data Peer Reviewed Assignment
 
 The following script contains two functions that produce the two requested datasets.
-1. mergeData takes the zip url as the attribute and returns the first requested dataset
-2. tidyData takes the the dataset returned from mergeData and returns the second requested dataset
+1. mergeData takes the zip url as the attribute and returns the first requested dataset. Usage: named_data<-mergeData("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")
+2. tidyData takes the the dataset returned from mergeData and returns the second requested dataset. Usage: 
+tidyData(named_data)
 
 ############################### Code ######################################
 
@@ -46,7 +47,5 @@ tidyData<-function(data){
 named_data<-mergeData("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")
 
 tidyData(named_data)
-
-#write.csv(data2,"tidy_data.txt")
 
 ################################## end code ##########################################
