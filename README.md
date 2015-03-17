@@ -7,7 +7,6 @@ The following script contains two functions that produce the two requested datas
 
 ############################### Code ######################################
 
-#setwd("O:/coursera/GettingData")
 library(plyr)
 library(dplyr,quietly=T,warn.conflicts=F)
 
@@ -43,10 +42,9 @@ tidyData<-function(data){
     summarize(tBodyAccmeanX = mean(tBodyAccmeanX, na.rm = TRUE),tBodyAccmeanY = mean(tBodyAccmeanY, na.rm = TRUE),tBodyAccmeanZ = mean(tBodyAccmeanZ, na.rm = TRUE),tBodyAccstdX = mean(tBodyAccstdX, na.rm = TRUE),tBodyAccstdY = mean(tBodyAccstdX, na.rm = TRUE),tBodyAccstdZ = mean(tBodyAccstdX, na.rm = TRUE))  
 }
 
-#First data set
+
 named_data<-mergeData("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")
 
-#Second data set
 tidyData(named_data)
 
 #write.csv(data2,"tidy_data.txt")
